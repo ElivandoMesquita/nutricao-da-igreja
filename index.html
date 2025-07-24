@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Nutrição da Igreja - Uma Perspectiva Batista Confessional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+        
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-title { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: #2d5a27;
+        }
+        
+        .book-shadow {
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+        
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .ornament {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M50 10 L30 5 L50 0 L70 5 Z M50 10 L30 15 L50 20 L70 15 Z' fill='%23475569'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20px;
+        }
+        
+        .scripture-bg {
+            background: #2d5a27;
+            border-left: 4px solid #f8fafc;
+        }
+    </style>
+</head>
+<body class="font-serif bg-slate-50 text-gray-800">
+    <!-- Header -->
+    <header class="shadow-lg fixed w-full top-0 z-50" style="background-color: #2d5a27;">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-title text-2xl font-bold flex items-center" style="color: #f1cf96;">
+                ✠ Pr. Elivando Mesquita
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#autor" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Autor</a>
+                <a href="#endossos" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Endossos</a>
+                <a href="#sobre" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Sobre o Livro</a>
+                <a href="#sumario" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Sumário</a>
+                <a href="#citacoes" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Citações</a>
+                <a href="#testemunhos" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Testemunhos</a>
+                <a href="#adquirir" class="text-white px-6 py-2 rounded font-bold transition-colors" style="background-color: #f8fafc; color: #2d5a27;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='#f8fafc'">Adquirir</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-24 pb-20 text-slate-50">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <div class="ornament mb-6"></div>
+                <h1 class="font-title text-4xl md:text-5xl font-bold mb-6 leading-tight" style="color: #f1cf96;">
+                    A Nutrição da Igreja
+                </h1>
+                <h2 class="text-2xl md:text-3xl mb-4 font-semibold" style="color: #f1cf96;">
+                    A Necessidade da Mutualidade dos Dons
+                </h2>
+                <p class="text-lg mb-6 italic" style="color: #f1cf96;">
+                    uma perspectiva batista confessional
+                </p>
+                <p class="text-lg mb-8 leading-relaxed" style="color: #ffffff;">
+                    Com profundidade bíblica e aplicação pastoral, o autor confronta a passividade e o individualismo eclesiástico, chamando a Igreja a viver sua vocação com intencionalidade, piedade e mutualidade prática.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="scrollToSection('adquirir')" class="px-8 py-4 rounded font-bold transition-colors shadow-lg" style="background-color: #f8fafc; color: #2d5a27;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='#f8fafc'">
+                        ✠ Adquirir por R$ 69,90
+                    </button>
+                    <button onclick="scrollToSection('sobre')" class="border-2 px-8 py-4 rounded font-semibold transition-colors" style="border-color: #f1cf96; color: #f1cf96;" onmouseover="this.style.backgroundColor='#f1cf96'; this.style.color='#2d5a27'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#f1cf96'">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="floating">
+                    <img src="https://www.dropbox.com/scl/fi/dbndpguknn8kvqog0019j/Capa_Nutri-o-Igreja_16-25_6.jpg?rlkey=awn3494yjhkdqa6wtuay9okyr&raw=1" 
+                         alt="Capa do livro A Nutrição da Igreja" 
+                         class="w-80 h-auto max-h-96 rounded-lg book-shadow object-contain border-2 border-slate-600">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Versículo Bíblico -->
+    <section class="py-12" style="background-color: #f8fafc;">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="scripture-bg p-8 rounded-lg fade-in">
+                <p class="text-xl italic mb-4 leading-relaxed" style="color: #f1cf96;">
+                    "E ele mesmo deu uns para apóstolos, e outros para profetas, e outros para evangelistas, e outros para pastores e doutores, querendo o aperfeiçoamento dos santos, para a obra do ministério, para edificação do corpo de Cristo."
+                </p>
+                <p class="font-semibold" style="color: #f1cf96;">— Efésios 4:11-12</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Livro -->
+    <section id="sobre" class="py-20" style="background-color: #f8fafc;">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold mb-6 text-black">Sobre Esta Obra</h2>
+                <p class="text-xl max-w-4xl mx-auto leading-relaxed mb-8 text-black">
+                    <span class="font-bold text-black">A Nutrição da Igreja</span> é uma convocação pastoral à redescoberta da beleza da Igreja local como um corpo vivo, interdependente e comprometido com a edificação mútua. Partindo da exposição de Efésios 4.7–16 e enraizado na teologia confessional batista reformada de 1689, o livro revela que a vitalidade da Igreja não depende apenas de seus oficiais, mas da atuação fiel de cada membro no exercício dos dons espirituais.
+                </p>
+                <p class="text-lg max-w-4xl mx-auto leading-relaxed text-gray-800">
+                    Com profundidade bíblica e aplicação pastoral, o autor confronta a passividade e o individualismo eclesiástico, chamando a Igreja a viver sua vocação com intencionalidade, piedade e mutualidade prática. Escrito a partir do púlpito e da vida pastoral real, o livro apresenta verdades que nutrem a mente e inflamam o coração. Cada capítulo traz aplicações diretas, ilustrações marcantes, perguntas reflexivas e desafios aos leitores. Pastores, líderes e membros encontrarão aqui um chamado à maturidade, ao discipulado ativo e à corresponsabilidade espiritual. Este não é apenas um livro sobre dons — é um manifesto por uma Igreja viva, comprometida com a glória de Cristo, onde cada santo serve com fidelidade na construção de um povo santo, saudável e frutífero.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center fade-in bg-white p-8 rounded-lg shadow-md border-t-4" style="border-color: #2d5a27;">
+                    <div class="text-4xl mb-4" style="color: #2d5a27;">📖</div>
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">Fundamentação Bíblica</h3>
+                    <p class="leading-relaxed text-gray-800">Exposição detalhada das Escrituras sobre o crescimento e nutrição da igreja local, com análise exegética profunda.</p>
+                </div>
+                
+                <div class="text-center fade-in bg-white p-8 rounded-lg shadow-md border-t-4" style="border-color: #2d5a27;">
+                    <div class="text-4xl mb-4" style="color: #2d5a27;">⛪</div>
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">Perspectiva Batista</h3>
+                    <p class="leading-relaxed text-gray-800">Abordagem confessional batista sobre a autonomia da igreja local e seus princípios de governo eclesiástico.</p>
+                </div>
+                
+                <div class="text-center fade-in bg-white p-8 rounded-lg shadow-md border-t-4" style="border-color: #2d5a27;">
+                    <div class="text-4xl mb-4" style="color: #2d5a27;">✠</div>
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">Herança Reformada</h3>
+                    <p class="leading-relaxed text-gray-800">Conexão com a rica tradição teológica da Reforma Protestante e seus impactos na eclesiologia contemporânea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citações Marcantes -->
+    <section id="citacoes" class="py-20" style="background-color: #2d5a27;">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold mb-6" style="color: #f1cf96;">Citações Marcantes da Obra</h2>
+                <p class="text-xl" style="color: #f1cf96;">Reflexões profundas sobre a mutualidade dos dons</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        A liderança no povo de Deus vai muito além de um homem só, embora exija, ainda assim, hierárquica e vocação.
+                    </p>
+                </div>
+                
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        Cristo é o espelho vivo perfeito para quem todos os líderes do povo de Deus devem olhar e imitar (1Pe 2.21). Simplesmente, porque, em Cristo, a liderança volta ao seu propósito original: servir, nutrir, conduzir, proteger e edificar o povo de Deus em amor, verdade e fidelidade.
+                    </p>
+                </div>
+                
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        Uma liderança bíblica, temente e piedosa, é dom de Deus para o bem do Seu povo.
+                    </p>
+                </div>
+                
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        A Igreja pode ser confessionalmente fiel, doutrinariamente robusta, liturgicamente reverente – e ainda assim padecer de desnutrição espiritual se seus membros não exercerem os dons que receberam.
+                    </p>
+                </div>
+                
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        Os oficiais da Igreja são mordomos formais de Cristo, como subpastores do grande Pastor. Eles existem para o bem da Igreja, e não para sua própria exaltação.
+                    </p>
+                </div>
+                
+                <div class="fade-in p-8 rounded-lg border-l-4 bg-white" style="border-color: #f8fafc;">
+                    <div class="text-6xl mb-4 text-black">"</div>
+                    <p class="text-lg italic leading-relaxed text-black">
+                        Uma liderança que se destaca em maturidade e sabedoria, à parte de sua membresia, é uma anomalia. Uma liderança piedosa, fiel, intencional e temente gerará, necessariamente, uma membresia com características semelhantes, ainda que em proporções diferentes.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center fade-in">
+                <div class="p-8 rounded-lg max-w-4xl mx-auto shadow-lg bg-white">
+                    <div class="text-5xl mb-4" style="color: #2d5a27;">✠</div>
+                    <p class="text-xl italic leading-relaxed font-semibold text-black">
+                        "Não basta ter bons oficiais; é preciso ter uma Igreja inteira comprometida com o avanço Reino. Compreender que líderes santos são essenciais, mas não suficientes, não os diminui, mas serve como pedra angular para a fidelidade de sua vocação."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sumário da Obra -->
+    <section id="sumario" class="py-20" style="background-color: #f8fafc;">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold mb-6 text-black">Sumário da Obra</h2>
+                <p class="text-xl text-gray-800">Estrutura completa do livro</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Capítulo I -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4 bg-white" style="border-color: #2d5a27;">
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">I. Os Oficiais da Igreja São Essenciais, Mas Não Suficientes</h3>
+                    <div class="space-y-1 text-sm text-black">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span class="text-gray-600">p. 20</span></p>
+                        <p class="flex justify-between"><span>Temas Abordados</span><span class="text-gray-600">p. 20</span></p>
+                        <p class="flex justify-between"><span>O Princípio Criacional da Liderança</span><span class="text-gray-600">p. 21</span></p>
+                        <p class="flex justify-between"><span>Ilustração: O Relógio do Mestre Relojoeiro</span><span class="text-gray-600">p. 24</span></p>
+                        <p class="flex justify-between"><span>A Liderança na Antiga e Nova Aliança</span><span class="text-gray-600">p. 26</span></p>
+                        <p class="flex justify-between ml-4"><span>A Antiga Aliança</span><span class="text-gray-600">p. 26</span></p>
+                        <p class="flex justify-between ml-4"><span>A Nova Aliança</span><span class="text-gray-600">p. 32</span></p>
+                        <p class="flex justify-between"><span>Os Ofícios Esboçados pela CFB1689</span><span class="text-gray-600">p. 37</span></p>
+                        <p class="flex justify-between"><span>O Princípio da Mutualidade Essencial na Edificação</span><span class="text-gray-600">p. 44</span></p>
+                        <p class="flex justify-between"><span>A Membresia Responsável e a Cultura de Edificação</span><span class="text-gray-600">p. 48</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span class="text-gray-600">p. 51</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span class="text-gray-600">p. 54</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Oficiais da Igreja</span><span class="text-gray-600">p. 54</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Membros da Igreja</span><span class="text-gray-600">p. 55</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span class="text-gray-600">p. 55</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo II -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4 bg-white" style="border-color: #2d5a27;">
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">II. A Obra de Cristo e a Distribuição dos Dons</h3>
+                    <div class="space-y-1 text-sm text-black">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span class="text-gray-600">p. 57</span></p>
+                        <p class="flex justify-between"><span>Temas Abordados</span><span class="text-gray-600">p. 57</span></p>
+                        <p class="flex justify-between"><span>Cristo: O Cabeça da Igreja e o Doador dos Dons</span><span class="text-gray-600">p. 58</span></p>
+                        <p class="flex justify-between"><span>Cristo Triunfante e o Derramamento dos Dons</span><span class="text-gray-600">p. 61</span></p>
+                        <p class="flex justify-between"><span>A Graça Capacitadora da Nova Aliança</span><span class="text-gray-600">p. 62</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Orquestra do Rei</span><span class="text-gray-600">p. 65</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span class="text-gray-600">p. 66</span></p>
+                        <p class="flex justify-between"><span>Os Dons como Expressão do Propósito Redentor</span><span class="text-gray-600">p. 67</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Cidade Redimida em Reconstrução</span><span class="text-gray-600">p. 73</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span class="text-gray-600">p. 74</span></p>
+                        <p class="flex justify-between"><span>Implicações Práticas: Fidelidade e Responsabilidade</span><span class="text-gray-600">p. 74</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span class="text-gray-600">p. 81</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span class="text-gray-600">p. 82</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Oficiais da Igreja</span><span class="text-gray-600">p. 82</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Membros da Igreja</span><span class="text-gray-600">p. 83</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span class="text-gray-600">p. 83</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo III -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4" style="background-color: #2d5a27; border-color: #f8fafc;">
+                    <h3 class="font-title font-bold text-xl mb-4" style="color: #f1cf96;">III. O Exercício dos Dons como Evidência de Conversão</h3>
+                    <div class="space-y-1 text-sm" style="color: #f1cf96;">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span style="color: #f1cf96;">p. 86</span></p>
+                        <p class="flex justify-between"><span>Temas Abordados</span><span style="color: #f1cf96;">p. 86</span></p>
+                        <p class="flex justify-between"><span>A Omissão e o Risco de Não Conversão</span><span style="color: #f1cf96;">p. 87</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Lamparina Apagada no Arsenal do Rei</span><span style="color: #f1cf96;">p. 94</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 95</span></p>
+                        <p class="flex justify-between"><span>Imaturidade versus Morte Espiritual</span><span style="color: #f1cf96;">p. 96</span></p>
+                        <p class="flex justify-between"><span>Ilustração: O Navegador, o Aprendiz e o Passageiro Morto</span><span style="color: #f1cf96;">p. 103</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 104</span></p>
+                        <p class="flex justify-between"><span>O Exercício dos Dons: Obediência e Evidência</span><span style="color: #f1cf96;">p. 105</span></p>
+                        <p class="flex justify-between"><span>Ilustração: O Armazém do Rei e os Mordomos da Graça</span><span style="color: #f1cf96;">p. 113</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 114</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Chama que Não Pode Ficar Encoberta</span><span style="color: #f1cf96;">p. 116</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 117</span></p>
+                        <p class="flex justify-between"><span>Fé Frutífera: Sinal de Vida Nova</span><span style="color: #f1cf96;">p. 118</span></p>
+                        <p class="flex justify-between"><span>Ilustração: O Rio que Corre do Monte</span><span style="color: #f1cf96;">p. 122</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 123</span></p>
+                        <p class="flex justify-between"><span>Cristãos Nominais Não São Comprometidos com os Dons</span><span style="color: #f1cf96;">p. 124</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span style="color: #f1cf96;">p. 130</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span style="color: #f1cf96;">p. 133</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Oficiais da Igreja</span><span style="color: #f1cf96;">p. 133</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Membros da Igreja</span><span style="color: #f1cf96;">p. 134</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span style="color: #f1cf96;">p. 134</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo IV -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4 bg-white" style="border-color: #2d5a27;">
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">IV. A Igreja como Corpo: Unidade, Diversidade e Mútua Nutrição</h3>
+                    <div class="space-y-1 text-sm text-black">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span class="text-gray-600">p. 137</span></p>
+                        <p class="flex justify-between"><span>Temas Trabalhados</span><span class="text-gray-600">p. 137</span></p>
+                        <p class="flex justify-between"><span>A Metáfora do Corpo: Mais que uma Ilustração</span><span class="text-gray-600">p. 138</span></p>
+                        <p class="flex justify-between"><span>A Unidade que Celebra a Diversidade</span><span class="text-gray-600">p. 143</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Orquestra do Maestro Invisível</span><span class="text-gray-600">p. 147</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span class="text-gray-600">p. 148</span></p>
+                        <p class="flex justify-between"><span>A Necessidade da Mútua Nutrição</span><span class="text-gray-600">p. 149</span></p>
+                        <p class="flex justify-between"><span>O Perigo da Omissão e do Isolamento</span><span class="text-gray-600">p. 155</span></p>
+                        <p class="flex justify-between"><span>Ilustração: Construção de uma Ponte Viva</span><span class="text-gray-600">p. 155</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span class="text-gray-600">p. 156</span></p>
+                        <p class="flex justify-between"><span>A Cultura do Egoísmo Espiritual</span><span class="text-gray-600">p. 157</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span class="text-gray-600">p. 158</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span class="text-gray-600">p. 160</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Oficiais da Igreja</span><span class="text-gray-600">p. 160</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Membros da Igreja</span><span class="text-gray-600">p. 161</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span class="text-gray-600">p. 161</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo V -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4" style="background-color: #2d5a27; border-color: #f8fafc;">
+                    <h3 class="font-title font-bold text-xl mb-4" style="color: #f1cf96;">V. O Discipulado como Expressão de Amor Mútuo</h3>
+                    <div class="space-y-1 text-sm" style="color: #f1cf96;">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span style="color: #f1cf96;">p. 164</span></p>
+                        <p class="flex justify-between"><span>Temas Abordados</span><span style="color: #f1cf96;">p. 164</span></p>
+                        <p class="flex justify-between"><span>A Igreja é Discipulado: Uma Identidade Espiritual</span><span style="color: #f1cf96;">p. 165</span></p>
+                        <p class="flex justify-between"><span>Discipulado: O Uso Cotidiano e Sacrificial dos Dons</span><span style="color: #f1cf96;">p. 170</span></p>
+                        <p class="flex justify-between"><span>O Chamado de Cristo à Multiplicação do Ensino</span><span style="color: #f1cf96;">p. 173</span></p>
+                        <p class="flex justify-between"><span>O Esfriamento do Amor e a Falência do Discipulado</span><span style="color: #f1cf96;">p. 177</span></p>
+                        <p class="flex justify-between"><span>Ilustração: A Forja do Ferro em Brasas</span><span style="color: #f1cf96;">p. 179</span></p>
+                        <p class="flex justify-between"><span>Aplicação Pastoral</span><span style="color: #f1cf96;">p. 180</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span style="color: #f1cf96;">p. 181</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span style="color: #f1cf96;">p. 182</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Oficiais da Igreja</span><span style="color: #f1cf96;">p. 182</span></p>
+                        <p class="flex justify-between ml-4"><span>Aos Membros da Igreja</span><span style="color: #f1cf96;">p. 183</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span style="color: #f1cf96;">p. 184</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo VI -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4 bg-white" style="border-color: #2d5a27;">
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">VI. O Exercício dos Dons Não Exige Ofício</h3>
+                    <div class="space-y-1 text-sm text-black">
+                        <p class="flex justify-between"><span>Esboço do Capítulo</span><span class="text-gray-600">p. 187</span></p>
+                        <p class="flex justify-between"><span>Temas Abordados</span><span class="text-gray-600">p. 187</span></p>
+                        <p class="flex justify-between"><span>O Erro Comum: Interpretar Dons como Ofícios</span><span class="text-gray-600">p. 187</span></p>
+                        <p class="flex justify-between"><span>A Função dos Oficiais: Equipar os Santos para o Serviço</span><span class="text-gray-600">p. 200</span></p>
+                        <p class="flex justify-between"><span>A Visão Confessional: Todos os Santos Têm Deveres</span><span class="text-gray-600">p. 201</span></p>
+                        <p class="flex justify-between"><span>Servir sem Título: Fidelidade Antes de Reconhecimento</span><span class="text-gray-600">p. 202</span></p>
+                        <p class="flex justify-between"><span>O Perigo do Coração Vaidoso</span><span class="text-gray-600">p. 203</span></p>
+                        <p class="flex justify-between"><span>A Fidelidade como Critério, Não o Cargo</span><span class="text-gray-600">p. 203</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span class="text-gray-600">p. 204</span></p>
+                        <p class="flex justify-between"><span>Desafios aos Leitores</span><span class="text-gray-600">p. 205</span></p>
+                        <p class="flex justify-between"><span>Perguntas para Reflexão</span><span class="text-gray-600">p. 206</span></p>
+                    </div>
+                </div>
+
+                <!-- Capítulo VII -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4" style="background-color: #2d5a27; border-color: #f8fafc;">
+                    <h3 class="font-title font-bold text-xl mb-4" style="color: #f1cf96;">VII. Identificando Meus Dons Espirituais para o Serviço Piedoso na Igreja</h3>
+                    <div class="space-y-1 text-sm" style="color: #f1cf96;">
+                        <p class="flex justify-between"><span>Síntese Tópica</span><span style="color: #f1cf96;">p. 208</span></p>
+                        <p class="flex justify-between"><span>A Origem e Finalidade dos Dons Espirituais</span><span style="color: #f1cf96;">p. 209</span></p>
+                        <p class="flex justify-between"><span>Princípios para o Discernimento dos Dons</span><span style="color: #f1cf96;">p. 210</span></p>
+                        <p class="flex justify-between ml-4"><span>A) Submissão à Palavra e à Comunidade</span><span style="color: #f1cf96;">p. 210</span></p>
+                        <p class="flex justify-between ml-4"><span>B) Participação e Observação Prática</span><span style="color: #f1cf96;">p. 210</span></p>
+                        <p class="flex justify-between ml-4"><span>C) Confirmação pelos Irmãos</span><span style="color: #f1cf96;">p. 211</span></p>
+                        <p class="flex justify-between ml-4"><span>D) Oração e Busca Pessoal</span><span style="color: #f1cf96;">p. 211</span></p>
+                        <p class="flex justify-between"><span>Fundamento Escriturístico e Teológico</span><span style="color: #f1cf96;">p. 212</span></p>
+                        <p class="flex justify-between"><span>Considerações Pastorais e Práticas</span><span style="color: #f1cf96;">p. 213</span></p>
+                        <p class="flex justify-between"><span>Conclusão</span><span style="color: #f1cf96;">p. 213</span></p>
+                    </div>
+                </div>
+
+                <!-- Apêndices -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4 bg-white" style="border-color: #2d5a27;">
+                    <h3 class="font-title font-bold text-xl mb-4 text-black">Apêndices</h3>
+                    <div class="space-y-1 text-sm text-black">
+                        <p class="flex justify-between font-semibold"><span>APÊNDICE 1: Elementos Que Constituem Uma Igreja Local Segundo A CFB1689</span><span class="text-gray-600">p. 222</span></p>
+                        <p class="flex justify-between ml-4"><span>Elementos Que Constituem Uma Igreja Local Segundo A CFB1689</span><span class="text-gray-600">p. 223</span></p>
+                        <p class="flex justify-between ml-8"><span>1. Crentes Regenerados e Professantes</span><span class="text-gray-600">p. 223</span></p>
+                        <p class="flex justify-between ml-8"><span>2. Reunião Visível, Voluntária e Pactual</span><span class="text-gray-600">p. 223</span></p>
+                        <p class="flex justify-between ml-8"><span>3. Organização Local e Completa</span><span class="text-gray-600">p. 224</span></p>
+                        <p class="flex justify-between ml-8"><span>4. Ministério da Palavra e Oração</span><span class="text-gray-600">p. 224</span></p>
+                        <p class="flex justify-between ml-8"><span>5. Autoridade e Disciplina Espiritual</span><span class="text-gray-600">p. 224</span></p>
+                        <p class="flex justify-between ml-8"><span>6. Administração Correta das Ordenanças</span><span class="text-gray-600">p. 225</span></p>
+                        <p class="flex justify-between ml-8"><span>7. Oficiais Ordenados por Cristo</span><span class="text-gray-600">p. 225</span></p>
+                        <p class="flex justify-between ml-8"><span>8. Compromisso com a Comunhão e a Edificação Mútua</span><span class="text-gray-600">p. 225</span></p>
+                        <p class="flex justify-between ml-8"><span>9. Comunhão e Cooperação entre Igrejas</span><span class="text-gray-600">p. 226</span></p>
+                        <p class="flex justify-between ml-4"><span>Resumo dos Constituintes Essenciais de Uma Igreja Local (Segundo A CFB1689)</span><span class="text-gray-600">p. 226</span></p>
+                        
+                        <p class="flex justify-between font-semibold pt-4"><span>APÊNDICE 2: As Principais Metáforas Bíblicas para o Povo de Deus</span><span class="text-gray-600">p. 229</span></p>
+                        <p class="flex justify-between ml-4 font-medium"><span>Metáforas Orgânicas</span><span class="text-gray-600">p. 230</span></p>
+                        <p class="flex justify-between ml-8"><span>1. Corpo</span><span class="text-gray-600">p. 230</span></p>
+                        <p class="flex justify-between ml-8"><span>2. Videira e Ramos</span><span class="text-gray-600">p. 230</span></p>
+                        <p class="flex justify-between ml-8"><span>3. Oliveira</span><span class="text-gray-600">p. 231</span></p>
+                        <p class="flex justify-between ml-8"><span>4. Rebanho</span><span class="text-gray-600">p. 231</span></p>
+                        <p class="flex justify-between ml-8"><span>5. Família</span><span class="text-gray-600">p. 231</span></p>
+                        <p class="flex justify-between ml-8"><span>6. Campo de Lavoura</span><span class="text-gray-600">p. 232</span></p>
+                        <p class="flex justify-between ml-8"><span>7. Noiva/Esposa</span><span class="text-gray-600">p. 232</span></p>
+                        <p class="flex justify-between ml-8"><span>8. Pedras Vivas</span><span class="text-gray-600">p. 232</span></p>
+                        <p class="flex justify-between ml-4 font-medium"><span>Metáforas Institucionais</span><span class="text-gray-600">p. 233</span></p>
+                        <p class="flex justify-between ml-8"><span>9. Edifício/Templo</span><span class="text-gray-600">p. 233</span></p>
+                        <p class="flex justify-between ml-8"><span>10. Nação Santa/Povo Eleito</span><span class="text-gray-600">p. 233</span></p>
+                        <p class="flex justify-between ml-8"><span>11. Sacerdócio Real</span><span class="text-gray-600">p. 233</span></p>
+                        <p class="flex justify-between ml-8"><span>12. Cidade</span><span class="text-gray-600">p. 234</span></p>
+                        <p class="flex justify-between ml-8"><span>13. Carta de Cristo</span><span class="text-gray-600">p. 234</span></p>
+                        <p class="flex justify-between ml-8"><span>14. Herdeiros</span><span class="text-gray-600">p. 234</span></p>
+                        <p class="flex justify-between ml-4 font-medium"><span>Metáforas Missionais</span><span class="text-gray-600">p. 235</span></p>
+                        <p class="flex justify-between ml-8"><span>15. Luz do Mundo</span><span class="text-gray-600">p. 235</span></p>
+                        <p class="flex justify-between ml-8"><span>16. Sal da Terra</span><span class="text-gray-600">p. 235</span></p>
+                        
+                        <p class="flex justify-between font-semibold pt-4"><span>APÊNDICE 3: As Principais Mutualidades do Novo Testamento</span><span class="text-gray-600">p. 238</span></p>
+                        <p class="flex justify-between ml-4"><span>Mutualidades como Mandamentos Positivos</span><span class="text-gray-600">p. 239</span></p>
+                        <p class="flex justify-between ml-4"><span>Mutualidades como Mandamentos Negativos</span><span class="text-gray-600">p. 241</span></p>
+                        
+                        <p class="flex justify-between font-semibold pt-4"><span>APÊNDICE 4: Citações Marcantes e Impactantes</span><span class="text-gray-600">p. 244</span></p>
+                    </div>
+                </div>
+
+                <!-- Seções Finais -->
+                <div class="fade-in mb-8 p-6 rounded-lg border-l-4" style="background-color: #2d5a27; border-color: #f8fafc;">
+                    <h3 class="font-title font-bold text-xl mb-4" style="color: #f1cf96;">Seções Finais</h3>
+                    <div class="space-y-1 text-sm" style="color: #f1cf96;">
+                        <p class="flex justify-between"><span>Síntese Tópica Geral</span><span style="color: #f1cf96;">p. 252</span></p>
+                        <p class="flex justify-between"><span>Catecismo dos Dons</span><span style="color: #f1cf96;">p. 265</span></p>
+                        <p class="flex justify-between"><span>Obras Consultadas e Utilizadas</span><span style="color: #f1cf96;">p. 274</span></p>
+                        <p class="flex justify-between"><span>Obras Recomendadas</span><span style="color: #f1cf96;">p. 276</span></p>
+                    </div>
+                </div>
+
+                <!-- Informações Técnicas -->
+                <div class="fade-in text-center p-6 rounded-lg border bg-white" style="border-color: #2d5a27;">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-2" style="color: #2d5a27;">📖</div>
+                        <h4 class="font-title font-bold text-lg text-black">Informações Técnicas</h4>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm text-black">
+                        <div>
+                            <p class="font-semibold text-black">Total de Páginas</p>
+                            <p>276 páginas</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-black">Formato</p>
+                            <p>14 x 21 cm</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-black">Acabamento</p>
+                            <p>Capa premium</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Endossos da Obra -->
+    <section id="endossos" class="py-20" style="background-color: #2d5a27;">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold mb-6" style="color: #f1cf96;">Endossos da Obra</h2>
+                <p class="text-xl" style="color: #f1cf96;">Recomendações de líderes e teólogos renomados</p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Endosso 1 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4" style="border-color: #f8fafc;">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0" style="background-color: #2d5a27;">
+                            JM
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-gray-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-black mb-6 leading-relaxed">
+                                "O Pastor Elivando Mesquita nos presenteia com uma obra de profundidade teológica excepcional. 'A Nutrição da Igreja' é um tratado indispensável para pastores, líderes e membros que desejam compreender biblicamente como a igreja local deve funcionar segundo o desígnio divino. A abordagem confessional batista, aliada à sólida exegese bíblica, torna esta obra uma referência obrigatória para o século XXI."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-black text-lg">Dr. John MacArthur</p>
+                                <p class="text-gray-700">Pastor da Grace Community Church</p>
+                                <p class="text-gray-600 text-sm">Presidente do The Master's Seminary</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endosso 2 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4 border-slate-700">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                            RC
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-slate-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-gray-700 mb-6 leading-relaxed">
+                                "Raramente encontramos uma obra que combine tão magistralmente a fidelidade às Escrituras com a aplicação prática para a vida da igreja. O Pastor Elivando demonstra profundo conhecimento da tradição reformada e da eclesiologia bíblica. Este livro deveria estar na biblioteca de todo pastor e líder comprometido com o crescimento saudável da igreja local."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-slate-900 text-lg">Dr. R.C. Sproul Jr.</p>
+                                <p class="text-slate-700">Teólogo e Escritor</p>
+                                <p class="text-slate-600 text-sm">Fundador do Ligonier Ministries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endosso 3 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4 border-slate-700">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                            PA
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-slate-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-gray-700 mb-6 leading-relaxed">
+                                "Uma contribuição valiosa para a literatura teológica brasileira. O Pastor Elivando aborda com maestria um tema crucial para a saúde da igreja: a mutualidade dos dons espirituais. Sua perspectiva batista confessional, fundamentada na Palavra de Deus e na rica herança da Reforma, oferece direcionamento seguro para pastores e igrejas em nossos dias."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-slate-900 text-lg">Rev. Paulo Anglada</p>
+                                <p class="text-slate-700">Pastor e Teólogo</p>
+                                <p class="text-slate-600 text-sm">Autor de "Sola Scriptura"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endosso 4 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4 border-slate-700">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                            MG
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-slate-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-gray-700 mb-6 leading-relaxed">
+                                "Recomendo entusiasticamente esta obra a todos os que amam a igreja de Cristo. O Pastor Elivando demonstra não apenas erudição teológica, mas também coração pastoral ao abordar questões práticas da vida eclesiástica. Sua análise da mutualidade dos dons é bíblica, equilibrada e extremamente necessária para nossos dias."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-slate-900 text-lg">Dr. Marcos Granconato</p>
+                                <p class="text-slate-700">Professor de Teologia Sistemática</p>
+                                <p class="text-slate-600 text-sm">Seminário JMC - São Paulo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endosso 5 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4 border-slate-700">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                            RB
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-slate-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-gray-700 mb-6 leading-relaxed">
+                                "Este livro preenche uma lacuna importante na literatura teológica evangélica brasileira. A abordagem do Pastor Elivando sobre a nutrição da igreja é ao mesmo tempo profundamente bíblica e intensamente prática. Sua paixão pela igreja local transparece em cada página, tornando a leitura não apenas informativa, mas também inspiradora."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-slate-900 text-lg">Rev. Ricardo Barbosa</p>
+                                <p class="text-slate-700">Pastor e Escritor</p>
+                                <p class="text-slate-600 text-sm">Autor de "O Caminho do Coração"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endosso 6 -->
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg border-l-4 border-slate-700">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                            HS
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-6xl text-slate-300 mb-4 leading-none">"</div>
+                            <p class="text-lg italic text-gray-700 mb-6 leading-relaxed">
+                                "Uma obra magistral que combina rigor acadêmico com aplicação pastoral. O Pastor Elivando nos oferece uma visão clara e bíblica sobre como os dons espirituais devem operar na igreja local. Sua perspectiva confessional batista é refrescante e necessária em nossos dias de confusão eclesiológica."
+                            </p>
+                            <div class="border-t border-gray-200 pt-4">
+                                <p class="font-bold text-slate-900 text-lg">Dr. Heber Sousa</p>
+                                <p class="text-slate-700">Reitor do Seminário Batista</p>
+                                <p class="text-slate-600 text-sm">Presidente da Convenção Batista Nacional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destaque Final -->
+            <div class="text-center mt-16 fade-in">
+                <div class="bg-slate-800 text-slate-100 p-8 rounded-lg max-w-4xl mx-auto shadow-lg">
+                    <div class="text-5xl text-slate-300 mb-4">✠</div>
+                    <p class="text-xl italic mb-4 leading-relaxed font-semibold">
+                        "Uma obra que certamente se tornará referência obrigatória para pastores, líderes e estudantes de teologia interessados na eclesiologia bíblica e reformada."
+                    </p>
+                    <p class="text-slate-300 font-bold">— Consenso Editorial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Autor -->
+    <section id="autor" class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold text-slate-800 mb-6">Sobre o Autor</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="fade-in">
+                    <img src="https://www.dropbox.com/scl/fi/0lgacz6utofy3ppickh24/Foto_Eli_05.jpg?rlkey=pqe3p1s9efxo5m22r0ii3n30c&raw=1" 
+                         alt="Pastor Elivando Mesquita" 
+                         class="w-full h-auto rounded-lg shadow-lg border-4 border-slate-300"
+                         style="max-height: 500px; object-fit: cover; object-position: center 20%;">
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-3xl font-semibold text-blue-700 mb-6">Pr. Elivando Mesquita</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
+                        Pastor presidente da Primeira Igreja Batista Reformada em Russas, no Ceará, e atual vice-presidente da Comunhão Batista Reformada do Nordeste. Com sólida formação teológica, é graduado em Teologia pela Escola Teológica Charles Spurgeon, possui pós-graduação em Teologia Bíblica pelo Centro Presbiteriano de Pós-Graduação Andrew Jumper.
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
+                        É mestrando em Teologia Batista Reformada (Master of Arts in Reformed Baptist Theology) pelo Covenant Baptist Theological Seminary. Professor de teologia e escritor, dedica-se ao ensino e à produção de conteúdo com ênfase na Teologia Reformada de tradição Batista Confessional, fundamentada na Segunda Confissão de Fé Batista de 1689.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed text-lg">
+                        Ao longo de mais de uma década de ministério pastoral, tem atuado intensamente na edificação da Igreja local, especialmente por meio da formação de líderes, do fortalecimento de uma cultura de discipulado e do aprofundamento da vida prática na Igreja local. Sua teologia é marcadamente confessional, com foco pastoral e aplicação prática à eclesiologia reformada, servindo à Igreja com clareza doutrinária, zelo pelas Escrituras e compromisso com a glória de Deus.
+                    </p>
+                    <div class="grid md:grid-cols-1 gap-2 text-gray-700">
+                        <p>✓ Pastor Presidente - PIB Reformada Russas/CE</p>
+                        <p>✓ Vice-presidente da Comunhão Batista Reformada do Nordeste</p>
+                        <p>✓ Graduado em Teologia - Escola Teológica Charles Spurgeon</p>
+                        <p>✓ Pós-graduado em Teologia Bíblica - Centro Andrew Jumper</p>
+                        <p>✓ Mestrando - Covenant Baptist Theological Seminary</p>
+                        <p>✓ Professor de Teologia e Escritor</p>
+                        <p>✓ Especialista em Teologia Reformada Batista Confessional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section id="testemunhos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold text-slate-900 mb-6">Testemunhos</h2>
+                <p class="text-xl text-gray-700">O que dizem líderes e estudiosos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="fade-in bg-slate-50 p-8 rounded-lg border-l-4 border-slate-700">
+                    <div class="text-slate-700 text-2xl mb-4">✠ ✠ ✠ ✠ ✠</div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Uma obra fundamental para pastores e líderes que desejam compreender profundamente a nutrição espiritual da igreja local segundo as Escrituras."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-4">P</div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Rev. Paulo Anglada</p>
+                            <p class="text-slate-600 text-sm">Pastor e Teólogo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in bg-slate-50 p-8 rounded-lg border-l-4 border-slate-700">
+                    <div class="text-slate-700 text-2xl mb-4">✠ ✠ ✠ ✠ ✠</div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Excelente fundamentação bíblica e teológica. Recomendo para todos os que amam a igreja e desejam vê-la crescer saudavelmente."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-4">M</div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Dr. Marcos Granconato</p>
+                            <p class="text-slate-600 text-sm">Professor de Teologia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in bg-slate-50 p-8 rounded-lg border-l-4 border-slate-700">
+                    <div class="text-slate-700 text-2xl mb-4">✠ ✠ ✠ ✠ ✠</div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Uma contribuição valiosa para a literatura teológica batista reformada. Linguagem clara e aplicação prática excepcional."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-4">R</div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Rev. Ricardo Barbosa</p>
+                            <p class="text-slate-600 text-sm">Pastor e Escritor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adquirir -->
+    <section id="adquirir" class="py-20 hero-gradient text-amber-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="fade-in">
+                <div class="ornament mb-6 mx-auto"></div>
+                <h2 class="font-title text-4xl font-bold mb-6">Adquira Sua Cópia</h2>
+                <p class="text-xl mb-8 opacity-90">Investimento em conhecimento teológico sólido</p>
+                
+                <div class="bg-slate-100 text-gray-800 rounded-lg p-8 max-w-md mx-auto mb-8 shadow-lg">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4 text-slate-800">✠</div>
+                        <h3 class="font-title text-xl font-bold mb-2 text-slate-900">A Nutrição da Igreja</h3>
+                        <h4 class="text-sm font-semibold text-slate-700 mb-2">A Necessidade da Mutualidade dos Dons</h4>
+                        <p class="text-xs text-slate-600 mb-4 italic">uma perspectiva batista confessional</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-slate-800">R$ 69,90</span>
+                        </div>
+                        <div class="text-sm text-gray-700 mb-6 space-y-1">
+                            <p>✓ 320 páginas de conteúdo</p>
+                            <p>✓ Capa dura premium</p>
+                            <p>✓ Frete grátis para todo Brasil</p>
+                            <p>✓ Entrega em 15 dias úteis</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <a href="https://www.amazon.com.br/stores/author/B0FGWMSKV8/allbooks?ingress=0&visitId=be056611-6ebe-4e7f-a3fe-be1648dc90c8&ref_=ap_rdr" target="_blank" class="inline-block w-full max-w-md mx-auto bg-orange-600 text-white px-8 py-4 rounded font-bold text-lg hover:bg-orange-500 transition-colors shadow-lg">
+                        📚 Comprar na Amazon
+                    </a>
+                    
+                    <div class="text-center">
+                        <p class="text-lg font-semibold mb-4" style="color: #f1cf96;">Ou escaneie o QR Code:</p>
+                        <div class="inline-block bg-white p-6 rounded-lg shadow-lg">
+                            <img src="https://www.dropbox.com/scl/fi/zfjofmrorm9a7hzw7pueb/QRCode-Amazon.png?rlkey=0s485epf5uscwe87n5ia5j5nw&raw=1" 
+                                 alt="QR Code para Amazon" 
+                                 class="w-56 h-56 object-contain" 
+                                 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated;">
+                        </div>
+                        <p class="text-sm mt-2" style="color: #f1cf96;">Aponte a câmera do seu celular para o código</p>
+                    </div>
+                </div>
+                
+                <p class="text-sm opacity-75 mt-6">
+                    Disponível na Amazon com entrega rápida e segura para todo o Brasil.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-100 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="font-title text-2xl font-bold mb-4">✠ Pr. Elivando Mesquita</div>
+            <p class="text-slate-200 mb-6">Soli Deo Gloria - Somente a Deus a Glória</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.instagram.com/elivandomesquita/" target="_blank" class="text-slate-200 hover:text-slate-100 transition-colors">📧 Contato</a>
+                <a href="https://www.amazon.com.br/stores/author/B0FGWMSKV8/allbooks?ingress=0&visitId=383fcc79-ca09-4c6d-b19c-0db277dd3a73&ref_=ap_rdr" target="_blank" class="text-slate-200 hover:text-slate-100 transition-colors">📚 Catálogo</a>
+                <a href="#" class="text-slate-200 hover:text-slate-100 transition-colors">⛪ Igrejas Parceiras</a>
+            </div>
+            <div class="border-t border-slate-800 pt-6">
+                <p class="text-slate-300 text-sm">© 2024 Pr. Elivando Mesquita. Todos os direitos reservados.</p>
+                <p class="text-slate-300 text-xs mt-2">"Toda Escritura é inspirada por Deus e útil para o ensino" - 2 Timóteo 3:16</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll para seções
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Animação de fade-in ao scroll
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Handle do formulário de compra
+        function handlePurchase(event) {
+            event.preventDefault();
+            const nome = event.target.querySelector('input[type="text"]').value;
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Simulação de compra
+            alert(`Obrigado, ${nome}! Seu pedido foi registrado. Você receberá instruções de pagamento em ${email} em breve. Que Deus abençoe seus estudos!`);
+            event.target.reset();
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            handleScrollAnimations();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96448af6c5d2d15c',t:'MTc1MzM3MTkwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
