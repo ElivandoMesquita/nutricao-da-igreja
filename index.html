@@ -51,25 +51,72 @@
             border-left: 4px solid #f8fafc;
         }
     </style>
+    <style>
+  .nav-link {
+    color: #f8fafc;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-link:hover {
+    color: #f1cf96;
+  }
+
+  .mobile-link {
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: color 0.3s;
+  }
+  .mobile-link:hover {
+    color: #f1cf96;
+  }
+</style>
 </head>
 <body class="font-serif bg-slate-50 text-gray-800">
     <!-- Header -->
     <header class="shadow-lg fixed w-full top-0 z-50" style="background-color: #2d5a27;">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="font-title text-2xl font-bold flex items-center transition-colors" style="color: #f1cf96;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#f1cf96'">
-                ✠ Pr. Elivando Mesquita
-            </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#autor" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Autor</a>
-                <a href="#endossos" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Endossos</a>
-                <a href="#sobre" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Sobre o Livro</a>
-                <a href="#sumario" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Sumário</a>
-                <a href="#citacoes" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Citações</a>
-                <a href="#testemunhos" class="transition-colors font-medium" style="color: #f8fafc;" onmouseover="this.style.color='#f1cf96'" onmouseout="this.style.color='#f8fafc'">Testemunhos</a>
-                <a href="#adquirir" class="text-white px-6 py-2 rounded font-bold transition-colors" style="background-color: #f8fafc; color: #2d5a27;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='#f8fafc'">Adquirir</a>
-            </nav>
-        </div>
-    </header>
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+       class="font-title text-2xl font-bold flex items-center transition-colors"
+       style="color: #f1cf96;"
+       onmouseover="this.style.color='#ffffff'"
+       onmouseout="this.style.color='#f1cf96'">
+       ✠ Pr. Elivando Mesquita
+    </a>
+
+    <!-- Botão hambúrguer (visível apenas em mobile) -->
+    <button onclick="toggleMobileMenu()" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Navegação normal (desktop) -->
+    <nav class="hidden md:flex space-x-8">
+      <a href="#autor" class="nav-link">Autor</a>
+      <a href="#endossos" class="nav-link">Endossos</a>
+      <a href="#sobre" class="nav-link">Sobre o Livro</a>
+      <a href="#sumario" class="nav-link">Sumário</a>
+      <a href="#citacoes" class="nav-link">Citações</a>
+      <a href="#testemunhos" class="nav-link">Testemunhos</a>
+      <a href="#adquirir" class="text-white px-6 py-2 rounded font-bold transition-colors"
+         style="background-color: #f8fafc; color: #2d5a27;"
+         onmouseover="this.style.backgroundColor='#f1f5f9'"
+         onmouseout="this.style.backgroundColor='#f8fafc'">Adquirir</a>
+    </nav>
+  </div>
+
+  <!-- Menu mobile (oculto por padrão) -->
+  <div id="mobileMenu" class="md:hidden hidden flex flex-col space-y-4 bg-[#2d5a27] text-white px-6 py-4">
+    <a href="#autor" class="mobile-link">Autor</a>
+    <a href="#endossos" class="mobile-link">Endossos</a>
+    <a href="#sobre" class="mobile-link">Sobre o Livro</a>
+    <a href="#sumario" class="mobile-link">Sumário</a>
+    <a href="#citacoes" class="mobile-link">Citações</a>
+    <a href="#testemunhos" class="mobile-link">Testemunhos</a>
+    <a href="#adquirir" class="bg-white text-[#2d5a27] px-4 py-2 font-bold rounded text-center">Adquirir</a>
+  </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero-gradient pt-24 pb-20 text-slate-50">
@@ -801,6 +848,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             handleScrollAnimations();
         });
+        function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+}
+        
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9644becf37d5d14c',t:'MTc1MzM3NDAzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
