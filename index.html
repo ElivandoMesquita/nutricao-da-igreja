@@ -79,7 +79,7 @@
     
     <!-- Logo -->
     <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-       class="font-title text-2xl font-bold flex items-center transition-colors"
+       class="font-title text-xl md:text-2xl font-bold flex items-center transition-colors"
        style="color: #f1cf96;"
        onmouseover="this.style.color='#ffffff'"
        onmouseout="this.style.color='#f1cf96'">
@@ -107,7 +107,9 @@
   </div>
 
   <!-- Menu mobile (oculto por padrão) -->
-  <div id="mobileMenu" class="md:hidden hidden flex flex-col space-y-4 bg-[#2d5a27] text-white px-6 py-4">
+  <div id="mobileMenu"
+     class="md:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2d5a27] text-white px-6"
+     style="padding-top: 0; padding-bottom: 0;">
     <a href="#autor" class="mobile-link">Autor</a>
     <a href="#endossos" class="mobile-link">Endossos</a>
     <a href="#sobre" class="mobile-link">Sobre o Livro</a>
@@ -852,7 +854,25 @@
   const menu = document.getElementById('mobileMenu');
   menu.classList.toggle('hidden');
 }
-        
+
+        function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Fechar o menu quando um link for clicado
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLinks = document.querySelectorAll('#mobileMenu a');
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('mobileMenu');
+        if (!menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+        }
+      });
+    });
+  });
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9644becf37d5d14c',t:'MTc1MzM3NDAzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
