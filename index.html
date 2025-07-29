@@ -1341,5 +1341,34 @@
     });
   });
     </script>
+
+    <script>
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const link = document.querySelector(`.nav-link[data-section="${id}"]`);
+
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove("text-[#f1cf96]", "underline", "font-semibold"));
+          if (link) {
+            link.classList.add("text-[#f1cf96]", "underline", "font-semibold");
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.6 // Ativa quando 60% da seção está visível
+    }
+  );
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9644becf37d5d14c',t:'MTc1MzM3NDAzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
