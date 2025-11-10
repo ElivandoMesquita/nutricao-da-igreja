@@ -1235,97 +1235,153 @@
 
 
     <!-- Adquirir -->
-    <section id="adquirir" class="py-5 hero-gradient text-amber-50">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="fade-in">
-                <div class="ornament mb-6 mx-auto"></div>
-                <h2 class="font-title text-4xl font-bold mb-6">Adquira Sua Cópia</h2>
-                <p class="text-xl mb-8 opacity-90">Tenha um entendimento sólido sobre o uso dos Dons do Espírito</p>
-                
-                <div class="bg-slate-100 text-gray-800 rounded-lg p-8 max-w-md mx-auto mb-2 shadow-lg">
-                    <div class="text-center">
-                        <div class="text-xl font-bold text-red-700">
-                            <p>BLACK FRIDAY</p>
-                            <p>30% de Desconto</p>                
-                        </div>
-                        <div class="text-sm text-gray-700 mb-4 space-y-1"> 
-                        <!--    <p>APENAS ATÉ O DIA 13/09</p><br>   -->                         
-                        </div>
-                        
-                        <div class="mb-4">
-                          <!-- <a href="https://oestandartedecristo.com/loja/a-nutricao-da-igreja-elivando-mesquita" target="_blank"> -->
-                            <img src="https://www.anutricaodaigreja.com/images/img-capa-livro/Capa_Nutri%C3%A7%C3%A3o-Igreja_16-25_6.jpg"
-                                alt="Capa do Livro A Nutrição da Igreja"
-                                class="w-48 mx-auto rounded shadow-lg hover:scale-105 transition" />
-                          </a>
-                        </div>
-                        
-                        <div class="text-sm text-gray-700 mb-4 space-y-1">
-                            <p>✓ 280 páginas</p>
-                            <p>✓ Formato 16 x 23 cm</p>
-                            <p>✓ Entrega em todo território Nacional</p>
-                            <p>✓ Frete R$ 12,00 para todo Brasil (a unidade - frete módico)</p>                           
-                        </div>
-                       <div class="mb-1">
-                            <p class="text-xl font-bold text-slate-800">De R$ 84,90</p>
-                            <p class="text-3xl font-bold text-slate-800">Por R$ 59,40</p>
-                        </div>
-                    </div>
-                </div>
-              <!--
-                <div class="mt-6">
-                  <a href="https://oestandartedecristo.com/loja/a-nutricao-da-igreja-elivando-mesquita" target="_blank" 
-                    class="inline-block bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-6 rounded-lg shadow-md transition">
-                    Compre Aqui!
-                  </a>
-                </div>
-               -->
-              
-                <div class="space-y-4">
-                    <a href="https://wa.me/5585988294754?text=Olá%21%20Tenho%20interesse%20no%20livro%20A%20Nutrição%20da%20Igreja.%20Como%20posso%20comprar%3F" 
-                      target="_blank" 
-                      style="
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 10px;
-                        background-color: #25D366;
-                        color: white;
-                        padding: 12px 24px;
-                        font-size: 18px;
-                        font-weight: bold;
-                        border-radius: 8px;
-                        text-decoration: none;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        transition: background-color 0.3s ease;
-                        font-family: 'Georgia', serif;
-                      "
-                      onmouseover="this.style.backgroundColor='#1EBE5D'"
-                      onmouseout="this.style.backgroundColor='#25D366'">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                            alt="WhatsApp" 
-                            style="width: 30px; height: 30px;">
-                            Compre pelo WhatsApp
-                    </a>
-                    
-                    <div class="text-center">
-                        <p class="text-lg font-semibold mb-4" style="color: #f1cf96;">Ou escaneie o QR Code:</p>
-                        <div class="inline-block bg-white p-6 rounded-lg shadow-lg">
-                            <img src="http://anutricaodaigreja.com/images/QRCode%20-%20WhatsApp.png" 
-                                 alt="QR Code para WhatsApp" 
-                                 class="w-56 h-56 object-contain" 
-                                 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated;">
-                        </div>
-                       <p class="text-sm mt-2" style="color: #f1cf96;">Aponte a câmera do seu celular para o código</p>
-                    </div>
-                </div>
-                
+    <section id="adquirir" class="py-5 text-amber-50" style="background: radial-gradient(1200px 600px at 50% -200px, rgba(255,215,0,0.15), transparent 60%), linear-gradient(180deg, #0b0b0b 0%, #151515 100%);">
+  <style>
+    /* Estilos pontuais para o bloco Black Friday */
+    #adquirir .bf-badge {
+      background: linear-gradient(135deg, #111 0%, #000 50%, #111 100%);
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.5);
+      letter-spacing: .5px;
+    }
+    #adquirir .bf-glow {
+      box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.15), 0 12px 30px rgba(0, 0, 0, 0.55), inset 0 0 18px rgba(255, 215, 0, 0.08);
+      border: 1px solid rgba(255, 215, 0, 0.22);
+      background: linear-gradient(180deg, #0f0f0f, #141414);
+    }
+    #adquirir .price-current {
+      text-shadow: 0 2px 18px rgba(255, 215, 0, 0.3);
+    }
+    #adquirir .twinkle { animation: twinkle 2.2s ease-in-out infinite; }
+    @keyframes twinkle {
+      0%, 100% { opacity: .55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.03); }
+    }
+    #adquirir .ribbon {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #000;
+      color: #facc15;
+      padding: 8px 16px;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      transform: rotate(6deg);
+      box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+  </style>
 
-               <!-- <p class="text-sm opacity-75 mt-6">
-                    Disponível na Amazon com entrega rápida e segura para todo o Brasil.
-                </p> -->
-            </div>
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="fade-in relative">
+      <div class="ornament mb-6 mx-auto"></div>
+
+      <div class="inline-flex items-center gap-3 bf-badge rounded-full px-5 py-2 mb-4">
+        <span class="twinkle">✨</span>
+        <span class="font-extrabold text-yellow-300 tracking-wide">BLACK FRIDAY</span>
+        <span class="text-amber-200/80 text-sm">30% de desconto</span>
+      </div>
+
+      <h2 class="font-title text-4xl font-extrabold mb-3">
+        Adquira Sua Cópia
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Tenha um entendimento sólido sobre o uso dos Dons do Espírito
+      </p>
+
+      <div class="relative rounded-2xl p-8 max-w-md mx-auto mb-2 shadow-lg bf-glow">
+        <div class="ribbon">Oferta Limitada</div>
+
+        <div class="text-center">
+          <div class="text-sm text-amber-200/90 mb-4 space-y-1">
+            <p>✓ 280 páginas</p>
+            <p>✓ Formato 16 x 23 cm</p>
+            <p>✓ Entrega em todo território Nacional</p>
+            <p>✓ Frete R$ 12,00 para todo Brasil (a unidade, frete módico)</p>
+          </div>
+
+          <div class="mb-5 flex flex-col items-center gap-1">
+            <p class="text-base font-semibold text-amber-200/80">De</p>
+            <p class="text-2xl font-extrabold line-through decoration-red-500/80 text-amber-200/80">R$ 84,90</p>
+            <p class="text-base font-semibold text-amber-200/80 mt-3">Por</p>
+            <p class="text-4xl font-black text-yellow-300 price-current">R$ 59,40</p>
+            <p class="text-xs uppercase tracking-wider text-amber-200/70 mt-1">Black Friday 30% off</p>
+          </div>
+
+          <div class="mb-5">
+            <!-- <a href="https://oestandartedecristo.com/loja/a-nutricao-da-igreja-elivando-mesquita" target="_blank"> -->
+            <img
+              src="https://www.anutricaodaigreja.com/images/img-capa-livro/Capa_Nutri%C3%A7%C3%A3o-Igreja_16-25_6.jpg"
+              alt="Capa do Livro A Nutrição da Igreja"
+              class="w-48 mx-auto rounded shadow-lg hover:scale-105 transition"
+            />
+            <!-- </a> -->
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!--
+      <div class="mt-6">
+        <a href="https://oestandartedecristo.com/loja/a-nutricao-da-igreja-elivando-mesquita" target="_blank"
+          class="inline-block bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-6 rounded-lg shadow-md transition">
+          Compre Aqui
+        </a>
+      </div>
+      -->
+
+      <div class="space-y-4 mt-6">
+        <a
+          href="https://wa.me/5585988294754?text=Olá%21%20Tenho%20interesse%20no%20livro%20A%20Nutrição%20da%20Igreja.%20Como%20posso%20comprar%3F"
+          target="_blank"
+          style="
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            font-family: 'Georgia', serif;
+          "
+          onmouseover="this.style.backgroundColor='#1EBE5D'"
+          onmouseout="this.style.backgroundColor='#25D366'">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            style="width: 30px; height: 30px;"
+          >
+          Compre pelo WhatsApp
+        </a>
+
+        <div class="text-center">
+          <p class="text-lg font-semibold mb-4" style="color: #f1cf96;">Ou escaneie o QR Code</p>
+          <div class="inline-block bg-white p-6 rounded-lg shadow-lg">
+            <img
+              src="http://anutricaodaigreja.com/images/QRCode%20-%20WhatsApp.png"
+              alt="QR Code para WhatsApp"
+              class="w-56 h-56 object-contain"
+              style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated;"
+            >
+          </div>
+          <p class="text-sm mt-2" style="color: #f1cf96;">Aponte a câmera do seu celular para o código</p>
+        </div>
+      </div>
+
+      <!--
+      <p class="text-sm opacity-75 mt-6">
+        Disponível na Amazon com entrega rápida e segura para todo o Brasil.
+      </p>
+      -->
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-100 py-12">
